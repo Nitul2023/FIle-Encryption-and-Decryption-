@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Encryption Result</title>
+</head>
+<body>
+  <h2 th:if="${message}" th:text="${message}">Encryption successful!</h2>
+
+  <div th:if="${encryptedData}">
+    <p><strong>Encrypted Data:</strong></p>
+    <textarea rows="10" cols="80" readonly th:text="${encryptedData}"></textarea>
+  </div>
+
+  <div th:if="${key}">
+    <p><strong>Secret Key (Base64):</strong> <span th:text="${key}"></span></p>
+  </div>
+</body>
+</html>

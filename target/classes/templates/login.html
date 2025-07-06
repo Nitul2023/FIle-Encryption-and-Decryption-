@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Encrypt Tool</title>
+  <link rel="stylesheet" href="/swag.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo"><a href="/">Encrypt & Decrypt Tool</a></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="./about">About</a></li>
+          <li><a href="./members">Members</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Login Form -->
+  <main class="container">
+    <section class="tool-section">
+      <h2>User Login</h2>
+      <form action="/login" method="post">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Enter username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="swag.css" />
+  <script src="/function.js" defer></script>
+  <title>Encrypt & Decrypt Text File</title>
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo"><a href="/">Encrypt & Decrypt Tool</a></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="./members">Members</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Encrypt Section -->
+    <section class="tool-section">
+      <h2>Encrypt Text File</h2>
+      <form id="encrypt-form" method="POST" enctype="multipart/form-data" action="/encrypt" target="result-frame">
+        <input type="file" name="file" accept=".txt" required />
+        <button type="submit">Encrypt File</button>
+      </form>
+    </section>
+
+    <!-- Decrypt Section -->
+    <section class="tool-section">
+      <h2>Decrypt Text File</h2>
+      <form id="decrypt-form" method="POST" enctype="multipart/form-data" action="/decrypt" target="result-frame">
+        <input type="file" name="file" accept=".txt" required />
+        <input type="text" name="key" placeholder="Enter encryption key" required />
+        <button type="submit">Decrypt File</button>
+      </form>
+    </section>
+
+    <!-- Result Display Section -->
+    <section class="tool-section">
+      <h2>Result</h2>
+      <iframe name="result-frame" style="width: 100%; height: 200px; border: none; background: #f9f9f9; padding: 10px;"></iframe>
+    </section>
+  </main>
+</body>
+</html>
